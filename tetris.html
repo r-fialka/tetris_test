@@ -5,10 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tetris</title>
+    <style> button:hover{background-color: #CACACA !important;} button:active{background-color: red !important;}</style>
 </head>
 <body>
-    <img src="tetris.png" style="display: none;"/>
+    <img id="image" src="tetris.png" style="display: none; width: 24px; height: 24px;"/>
     <canvas id="canvas" width="400" height="800"></canvas>
+    <canvas id="nextShapeCanvas" width="200" height="200" style="position: absolute; top: 8px; left: 410px;"></canvas>
+    <canvas id="scoreCanvas" width="200" height="200" style="position: absolute; top: 220px; left: 410px;"></canvas>
+    <button style="width: 64px; height: 64px; border-radius: 50%; background-color: #E3E3E3; border: 0px" onClick="resetVars()">
+        <svg width="70%" height="70%" version="1.1" viewBox="0 0 5852.7 6567.5">
+            <use class="flash-shadow" xlink:href="#flash-id"></use>
+            <path id="flash-id" class="flash-fill" fill="white" d="M3077.42 2174.49l-1883.16 -1087.43 1883.28 -1087.06 0 727.98c1556.37,133.6 2775.15,1268.17 2775.15,2913.15 0,1615.95 -1310.39,2926.36 -2926.34,2926.36 -1752.83,0 -2926.36,-1381.29 -2926.36,-3085.98l745.07 0c0,1290.79 838.7,2340.91 2181.29,2340.91 1204.95,0 2181.29,-976.34 2181.29,-2181.29 0,-1232.98 -887.99,-2040.65 -2030.23,-2164.56l0 697.92z"/>
+        </svg>
+    </button>
+    
     <script src="tetris.js"></script>
 </body>
 </html>
